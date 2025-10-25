@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel BKI Prioritas Bank</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Panel - BKI Prioritas Bank</h1>
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Email</th>
+          <th>Saldo</th>
+          <th>Virtual Account</th>
+          <th>Status Akun</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User list akan di-render di sini -->
+      </tbody>
+    </table>
+
+    <h2>Buat Riwayat Transaksi Manual</h2>
+    <form id="manualTxForm">
+      <label>User:</label>
+      <select id="manualTxUser"></select>
+      <label>Jenis:</label>
+      <select id="manualTxType">
+        <option value="Kredit">Kredit</option>
+        <option value="Debet">Debet</option>
+      </select>
+      <label>Jumlah:</label>
+      <input type="number" id="manualTxAmount" required>
+      <label>Deskripsi:</label>
+      <input type="text" id="manualTxDesc" placeholder="Contoh: Admin menambahkan saldo">
+      <button type="submit">Tambah Transaksi</button>
+    </form>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

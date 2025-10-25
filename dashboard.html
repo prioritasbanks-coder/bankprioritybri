@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BKI Prioritas Bank - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+
+  <!-- HEADER -->
+  <header class="dashboard-header">
+    <h1>BKI Prioritas Bank</h1>
+    <span id="welcomeMsg">Selamat datang, User</span>
+    <button class="btn-logout" id="btnLogout">Logout</button>
+  </header>
+
+  <!-- SALDO & NOMOR VA -->
+  <section class="balance-section">
+    <h2>Saldo Anda</h2>
+    <div class="balance-container">
+      <span id="balance">Rp0</span>
+      <button class="icon-btn" id="toggleBalance">Hide/Show</button>
+    </div>
+    <div class="account-number">
+      <span>Nomor VA: </span><span id="accountNumber">0</span>
+    </div>
+  </section>
+
+  <!-- FITUR DASHBOARD -->
+  <section class="features-section">
+    <div class="features-grid">
+      <div class="feature disabled" id="btnTopup">Top-up</div>
+      <div class="feature disabled" id="btnReceive">Terima</div>
+      <div class="feature disabled" id="btnTransfer">Transfer</div>
+      <div class="feature disabled" id="btnPay">Bayar Tagihan</div>
+      <div class="feature disabled" id="btnQR">Scan / QRIS</div>
+    </div>
+  </section>
+
+  <!-- RIWAYAT TRANSAKSI -->
+  <section class="history-section">
+    <h2>Riwayat Transaksi</h2>
+    <ul class="history-list" id="historyList">
+      <li class="empty">Belum ada transaksi</li>
+    </ul>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-header">
+      <span id="modalTitle">Judul</span>
+      <span class="modal-close" id="modalClose">&times;</span>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
